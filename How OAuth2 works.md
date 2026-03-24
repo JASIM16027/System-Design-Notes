@@ -116,3 +116,49 @@ Canva চাইতে পারে শুধু `email` আর `profile`। Goog
 ### Authentication vs Authorization — এই দুটো এক জিনিস না
 
 OAuth2 মূলত Authorization-এর জন্য — অর্থাৎ "তুমি কী করতে পারবে।" Authentication — "তুমি কে" — এটার জন্য OAuth2-এর উপরে OpenID Connect (OIDC) layer যোগ হয়েছে, যেটা ID Token দেয়। যখন তুমি "Continue with Google" দিয়ে login করো, technically OAuth2 + OIDC দুটোই কাজ করছে।
+
+
+চলো step by step পুরো flow টা technically দেখি — প্রতিটি HTTP request/response সহ।OAuth2-এর পুরো technical flow টা একটা interactive stepper-এ দেখাই — প্রতিটা step-এ actual HTTP request/response সহ।এখন পুরো flow-এর একটা bird's-eye view দেখি — সব actor একসাথে কীভাবে interact করে:---
+
+
+<img width="745" height="421" alt="image" src="https://github.com/user-attachments/assets/08b527bb-3467-41f5-a8e5-e5f77851f10b" />
+
+
+<img width="776" height="479" alt="image" src="https://github.com/user-attachments/assets/8b3a5255-023f-4142-a890-8e5076838b95" />
+
+
+<img width="751" height="443" alt="image" src="https://github.com/user-attachments/assets/e11ce822-d122-417f-9334-3393fa509349" />
+
+
+<img width="739" height="398" alt="image" src="https://github.com/user-attachments/assets/bc5f5d62-bfbb-4b40-8363-04f1a56c40cf" />
+
+
+<img width="752" height="403" alt="image" src="https://github.com/user-attachments/assets/cff6c0bd-6851-48d4-8ca4-962067483925" />
+
+
+<img width="764" height="523" alt="image" src="https://github.com/user-attachments/assets/f818ba84-eab0-4fd7-8b5c-adac3ac707de" />
+
+<img width="750" height="513" alt="image" src="https://github.com/user-attachments/assets/1c729dd5-4d60-4c4a-8a48-a0d6fa8d3955" />
+
+
+<img width="755" height="483" alt="image" src="https://github.com/user-attachments/assets/713304d0-8445-4e26-9837-d66f0d4a72e3" />
+
+
+<img width="763" height="401" alt="image" src="https://github.com/user-attachments/assets/c2fb8440-bac7-46fa-8c58-0d85e8df9360" />
+
+
+
+<img width="838" height="712" alt="image" src="https://github.com/user-attachments/assets/7c664216-dabb-4bde-b68d-6a0db52b222d" />
+
+
+## কয়েকটা গুরুত্বপূর্ণ technical detail যা সবাই miss করে
+
+**Authorization Code কেন দরকার, সরাসরি Token কেন না?** যদি Token সরাসরি browser redirect-এ আসত, সেটা URL-এ দেখা যেত — browser history, server log, referrer header সব জায়গায় leak হতে পারত। Authorization Code ইচ্ছাকৃতভাবে worthless রাখা হয়েছে `client_secret` ছাড়া — তাই URL-এ আসলেও ক্ষতি নেই।
+
+**PKCE কী এবং কেন?** Public client যেমন mobile app বা SPA-তে `client_secret` securely রাখা যায় না (যে কেউ app unpack করে দেখতে পারে)। PKCE (Proof Key for Code Exchange) এই সমস্যা solve করে — request-এর আগে একটি random `code_verifier` তৈরি হয়, তার hash (`code_challenge`) Auth Server-এ পাঠানো হয়, আর Token exchange-এ original verifier পাঠিয়ে prove করা হয় যে একই party request করছে।
+
+**`state` parameter CSRF কীভাবে আটকায়?** Attacker যদি তোমাকে একটি malicious link-এ click করায় যেটা Google-কে তার নিজের callback URL-এ redirect করে, তাহলে `state` না থাকলে attacker-এর account-এ তোমার token চলে যেত। `state` একটি random নম্বর যা Canva generate করে আর callback-এ verify করে — attacker জানে না তাই match করাতে পারে না।
+
+
+
+
