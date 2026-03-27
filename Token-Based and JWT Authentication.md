@@ -1,5 +1,38 @@
 # Token-Based and JWT Authentication
 
+## Step
+
+<img width="768" height="406" alt="image" src="https://github.com/user-attachments/assets/0e329505-31fd-469b-ad38-da88d557ce4e" />
+
+## Step-1
+
+<img width="765" height="528" alt="image" src="https://github.com/user-attachments/assets/1fad7ce4-0b6f-4f98-a8bd-f04abe844c50" />
+
+## Step-2
+
+<img width="758" height="417" alt="image" src="https://github.com/user-attachments/assets/74f77d2e-7d89-45d7-b5ae-e334b04154b7" />
+
+## Step-3
+
+<img width="757" height="538" alt="image" src="https://github.com/user-attachments/assets/9b8bff16-1300-4d34-a853-c3c714b15742" />
+
+## Step-4
+
+<img width="757" height="465" alt="image" src="https://github.com/user-attachments/assets/24c2a4ae-9b10-4abd-8768-150de8124773" />
+
+## Step-5
+
+<img width="778" height="522" alt="image" src="https://github.com/user-attachments/assets/ac73e0ac-3f94-4af2-9962-5b41d9ec754d" />
+
+## Step-6
+
+<img width="760" height="415" alt="image" src="https://github.com/user-attachments/assets/121b2287-f26f-4ccf-a9d4-d3315f980d6b" />
+
+## Step-7
+
+<img width="768" height="536" alt="image" src="https://github.com/user-attachments/assets/1ca709b5-263b-4df0-8a65-27000957b2df" />
+
+
 Let me explain both of these authentication methods in detail.
 
 ## Token-Based Authentication
