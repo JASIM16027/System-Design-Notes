@@ -72,16 +72,21 @@ https://www.montumia.com/sd/load-balancer
 
 **আলোচ্য বিষয়:**
 
-* [Step](4.%20Token-Based%20and%20JWT%20Authentication.md#step)
-* [Step-1](4.%20Token-Based%20and%20JWT%20Authentication.md#step-1)
-* [Step-2](4.%20Token-Based%20and%20JWT%20Authentication.md#step-2)
-* [Step-3](4.%20Token-Based%20and%20JWT%20Authentication.md#step-3)
-* [Step-4](4.%20Token-Based%20and%20JWT%20Authentication.md#step-4)
-* [Step-5](4.%20Token-Based%20and%20JWT%20Authentication.md#step-5)
-* [Step-6](4.%20Token-Based%20and%20JWT%20Authentication.md#step-6)
-* [Step-7](4.%20Token-Based%20and%20JWT%20Authentication.md#step-7)
-* [Token-Based Authentication](4.%20Token-Based%20and%20JWT%20Authentication.md#token-based-authentication)
-* [JWT (JSON Web Token) Authentication](4.%20Token-Based%20and%20JWT%20Authentication.md#jwt-json-web-token-authentication)
+* সমস্যাটা আগে বুঝি — HTTP কিছু মনে রাখে না
+* পুরনো পদ্ধতি — Session (দারোয়ানের খাতা)
+* নতুন পদ্ধতি — Token (আইডি কার্ড)
+* পুরো Flow — ৭ ধাপে (ছবি সহ)
+* JWT-র তিন অংশ — Header · Payload · Signature
+* Signature — জালিয়াতি আটকানোর আসল জাদু
+* ⚠️ সবচেয়ে বড় ভুল ধারণা — payload encrypted না
+* Access Token ও Refresh Token — দুইটা কেন
+* Logout-এর সমস্যা ও তিনটা সমাধান
+* Token কোথায় রাখবে — localStorage vs httpOnly cookie
+* JWT vs Session তুলনা · কখন ব্যবহার করবে না
+* যে ভুলগুলো সবাই করে (`alg: none`, দুর্বল secret)
+* কোড দিয়ে দেখো — login, middleware, refresh, logout
+* 🔬 **আরো গভীরে:** HS256 vs RS256 · `kid` দিয়ে key rotation · JWE · token-এর আকার · clock skew · refresh race condition · mobile storage · ID token vs Access token · debug
+* Interview Q&A (১৬টা প্রশ্ন)
 
 ---
 
