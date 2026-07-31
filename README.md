@@ -94,14 +94,25 @@ https://www.montumia.com/sd/load-balancer
 
 **আলোচ্য বিষয়:**
 
-* [OAuth2 — বিস্তারিত সহজ ভাষায়](5.%20How%20OAuth2%20works.md#oauth2--বিস্তারিত-সহজ-ভাষায়)
-  * [Hotel Key Card Analogy](5.%20How%20OAuth2%20works.md#hotel-key-card-analogy)
-  * [চারটি Actor — এদের চেনো আগে](5.%20How%20OAuth2%20works.md#চারটি-actor--এদের-চেনো-আগে)
-  * [Step-by-Step Flow — প্রতিটি ধাপ বিস্তারিত](5.%20How%20OAuth2%20works.md#step-by-step-flow--প্রতিটি-ধাপ-বিস্তারিত)
-  * [Authorization Code কেন? সরাসরি Token কেন না?](5.%20How%20OAuth2%20works.md#authorization-code-কেন-সরাসরি-token-কেন-না)
-  * [Scope — Limited Permission-এর মূল concept](5.%20How%20OAuth2%20works.md#scope--limited-permission-এর-মূল-concept)
-  * [Authentication vs Authorization — এই দুটো এক জিনিস না](5.%20How%20OAuth2%20works.md#authentication-vs-authorization--এই-দুটো-এক-জিনিস-না)
-* [কয়েকটা গুরুত্বপূর্ণ technical detail যা সবাই miss করে](5.%20How%20OAuth2%20works.md#কয়েকটা-গুরুত্বপূর্ণ-technical-detail-যা-সবাই-miss-করে)
+* সমস্যাটা আগে বুঝি — password anti-pattern
+* Hotel Key Card Analogy
+* চারটি Actor — Resource Owner, Client, Auth Server, Resource Server
+* পুরো Flow — ধাপে ধাপে (sequence diagram সহ)
+* 💻 **কোড — সম্পূর্ণ Authorization Code Flow** (Express, login → callback → token → userinfo)
+* Authorization Code কেন, সরাসরি Token কেন না
+* `state` — Login CSRF আক্রমণ ও প্রতিরোধ (কোড সহ)
+* **PKCE** — secret ছাড়া নিরাপত্তা (Node + Browser কোড)
+* Scope · Incremental Authorization
+* **Grant Type** — Authorization Code · Client Credentials · Device Code (কোড সহ)
+* তিন রকম Token — ID vs Access vs Refresh
+* **ID Token যাচাই — JWKS দিয়ে** (`iss`, `aud`, `exp`, `nonce`)
+* Refresh Token — নীরবে নতুন token (কোড সহ)
+* Token Revocation ও Introspection (কোড সহ)
+* OIDC Discovery — `.well-known/openid-configuration`
+* SPA ও Mobile-এ কীভাবে — BFF pattern
+* Authentication vs Authorization (OAuth vs OIDC)
+* ⚠️ ৭টা নিরাপত্তা-ভুল — `redirect_uri`, `aud`, email দিয়ে user মেলানো
+* Production Checklist · Interview Q&A (১২টা প্রশ্ন)
 
 ---
 
