@@ -182,7 +182,7 @@ https://www.montumia.com/sd/load-balancer
 
 ---
 
-## 10. [What Happens When You Type `www.google.com` in a Browser?](A1.What%20Happens%20When%20You%20Type%20%60www.google.com%60%20in%20a%20Browser%3F.md)
+## A1. [What Happens When You Type `www.google.com` in a Browser?](A1.What%20Happens%20When%20You%20Type%20%60www.google.com%60%20in%20a%20Browser%3F.md)
 
 **আলোচ্য বিষয়:**
 
@@ -200,3 +200,231 @@ https://www.montumia.com/sd/load-balancer
 * [📌 সহজ উদাহরণ (Real-life analogy)](A1.What%20Happens%20When%20You%20Type%20%60www.google.com%60%20in%20a%20Browser%3F.md#-সহজ-উদাহরণ-real-life-analogy)
 
 ---
+
+## 10. [Scalability - Vertical vs Horizontal Scaling](10.%20Scalability%20-%20Vertical%20vs%20Horizontal%20Scaling.md)
+
+**আলোচ্য বিষয়:**
+
+* Scalability আসলে কী? — চায়ের দোকানের গল্প
+* Vertical Scaling (Scale Up) — সুবিধা ও সীমাবদ্ধতা
+* Horizontal Scaling (Scale Out) — সুবিধা ও জটিলতা
+* কখন কোনটা বেছে নেবে
+* Horizontal Scaling-এর আসল চ্যালেঞ্জ — State
+* একটা System কীভাবে ধাপে ধাপে বড় হয় (৭ ধাপ)
+* Elasticity, Bottleneck, SPOF, Graceful Degradation
+* Interview Q&A
+
+---
+
+## 11. [Load Balancer - Complete Guide](11.%20Load%20Balancer%20-%20Complete%20Guide.md)
+
+**আলোচ্য বিষয়:**
+
+* Load Balancer কী? — ট্রাফিক পুলিশের গল্প
+* ৬টা Load Balancing Algorithm — কখন কোনটা
+* Health Check — Shallow vs Deep
+* Layer 4 vs Layer 7 Load Balancer
+* Load Balancer নিজেই যদি মরে যায়? (Active-Passive, Virtual IP)
+* Sticky Session — দরকার আছে কি?
+* SSL Termination
+* জনপ্রিয় Load Balancer গুলো
+* Interview Q&A
+
+---
+
+## 12. [Caching - Strategies, Redis and Eviction](12.%20Caching%20-%20Strategies,%20Redis%20and%20Eviction.md)
+
+**আলোচ্য বিষয়:**
+
+* Cache কী? — রান্নাঘরের গল্প
+* Latency-র সংখ্যা — RAM vs Disk vs Network
+* Cache-এর ৭টা স্তর
+* ৫টা Caching Strategy — Cache-Aside, Read/Write-Through, Write-Behind, Write-Around
+* Eviction Policy — LRU, LFU, FIFO
+* TTL ও Cache Invalidation
+* তিনটা বিখ্যাত সমস্যা — Stampede, Penetration, Avalanche
+* Redis vs Memcached · Redis-এর Data Structure
+* Interview Q&A
+
+---
+
+## 13. [CDN - Content Delivery Network](13.%20CDN%20-%20Content%20Delivery%20Network.md)
+
+**আলোচ্য বিষয়:**
+
+* CDN কী? — কুরিয়ার সার্ভিসের গল্প
+* CDN কীভাবে কাজ করে — ধাপে ধাপে
+* Push CDN vs Pull CDN
+* Cache-Control Header ও Cache Busting
+* CDN-এ content update করার ৩ উপায়
+* DDoS Protection, Compression, WAF
+* Edge Computing
+* Interview Q&A
+
+---
+
+## 14. [Database - SQL vs NoSQL, Indexing and Transactions](14.%20Database%20-%20SQL%20vs%20NoSQL,%20Indexing%20and%20Transactions.md)
+
+**আলোচ্য বিষয়:**
+
+* SQL (Relational) Database
+* NoSQL-এর ৪ ধরন — Document, Key-Value, Column-Family, Graph
+* SQL vs NoSQL — কখন কোনটা · Polyglot Persistence
+* ACID vs BASE
+* Indexing — B+ Tree কীভাবে কাজ করে, কখন index কাজ করে না
+* Transaction ও Isolation Level · Deadlock · Optimistic vs Pessimistic Lock
+* Normalization vs Denormalization
+* Connection Pooling · N+1 Query Problem
+* Interview Q&A
+
+---
+
+## 15. [Database Scaling - Replication, Sharding and Partitioning](15.%20Database%20Scaling%20-%20Replication,%20Sharding%20and%20Partitioning.md)
+
+**আলোচ্য বিষয়:**
+
+* Database Scaling-এর ৭ ধাপ (Index → Cache → ... → Shard)
+* Replication — Primary-Replica, Multi-Primary, Sync vs Async
+* Replication Lag ও "Read your own writes" সমস্যা
+* Failover ও Split Brain
+* Partitioning (Horizontal ও Vertical)
+* Sharding — ৫টা strategy, Shard Key বাছার নিয়ম
+* Sharding-এর ৭টা সমস্যা
+* Federation — Feature অনুযায়ী DB ভাগ
+* Interview Q&A
+
+---
+
+## 16. [CAP Theorem and Consistency Models](16.%20CAP%20Theorem%20and%20Consistency%20Models.md)
+
+**আলোচ্য বিষয়:**
+
+* CAP Theorem — তিনটার মধ্যে দুটো
+* কেন তিনটা একসাথে পাওয়া যায় না — গল্প দিয়ে
+* CP vs AP — বাস্তবে পছন্দটা এখানেই
+* CA কেন আসলে হয় না
+* PACELC — CAP-এর উন্নত সংস্করণ
+* ৬টা Consistency Model
+* Quorum — W + R > N
+* কোন Database কোন দিকে · বাস্তব উদাহরণ দিয়ে সিদ্ধান্ত
+* Interview Q&A
+
+---
+
+## 17. [Message Queue and Event-Driven Architecture](17.%20Message%20Queue%20and%20Event-Driven%20Architecture.md)
+
+**আলোচ্য বিষয়:**
+
+* Synchronous-এর যন্ত্রণা — সমস্যাটা আগে বুঝি
+* Queue ব্যবহারের ৫টা কারণ
+* Queue vs Pub/Sub
+* Kafka — Topic, Partition, Offset, Consumer Group
+* Kafka vs RabbitMQ
+* Delivery Guarantee — At-most/At-least/Exactly-once
+* Idempotency · Dead Letter Queue · Message Ordering · Consumer Lag
+* Event-Driven Architecture · Event Sourcing · CQRS · Saga Pattern
+* Interview Q&A
+
+---
+
+## 18. [Monolith vs Microservices](18.%20Monolith%20vs%20Microservices.md)
+
+**আলোচ্য বিষয়:**
+
+* দুটো জিনিস আগে সহজ করে বুঝি — রেস্তোরাঁর গল্প
+* Monolith ও Microservices — সুবিধা-অসুবিধা
+* Microservices-এর লুকানো খরচ · Distributed Monolith
+* কখন কোনটা · Modular Monolith
+* Service কীভাবে ভাগ করবে (DDD, Bounded Context)
+* Service Communication — REST, gRPC, Async
+* Database per Service
+* Resilience Pattern — Circuit Breaker, Retry, Timeout, Bulkhead
+* Observability-র তিন স্তম্ভ · Strangler Fig Pattern
+* Interview Q&A
+
+---
+
+## 19. [Consistent Hashing](19.%20Consistent%20Hashing.md)
+
+**আলোচ্য বিষয়:**
+
+* সাধারণ Hashing কেন ব্যর্থ (`hash % N`-এর সমস্যা)
+* Hash Ring — মূল ধারণা
+* Node যোগ/বিয়োগ করলে কী হয়
+* অসম বণ্টনের সমস্যা
+* Virtual Node — আসল সমাধান
+* Replication · কোড সহ implementation
+* কোথায় কোথায় ব্যবহার হয় · সীমাবদ্ধতা
+* Interview Q&A
+
+---
+
+## 20. [Rate Limiting - Algorithms and Design](20.%20Rate%20Limiting%20-%20Algorithms%20and%20Design.md)
+
+**আলোচ্য বিষয়:**
+
+* Rate Limiting কী এবং কেন · কোথায় বসাবে · কার উপর limit
+* ৫টা Algorithm — Fixed Window, Sliding Log, Sliding Counter, Token Bucket, Leaky Bucket
+* Algorithm গুলোর তুলনা
+* Distributed Rate Limiting — Redis, fail-open vs fail-closed
+* Redis + Lua দিয়ে বাস্তবায়ন
+* 429 Response ও Retry-After header
+* Throttling-এর ধরন · বাস্তব design বিবেচনা
+* Interview Q&A
+
+---
+
+## 21. [Real-time Communication - Polling, SSE, WebSocket](21.%20Real-time%20Communication%20-%20Polling,%20SSE,%20WebSocket.md)
+
+**আলোচ্য বিষয়:**
+
+* HTTP-র মূল সীমাবদ্ধতা
+* Short Polling · Long Polling
+* Server-Sent Events (SSE) — auto-reconnect সহ
+* WebSocket — handshake থেকে scaling
+* WebRTC — peer-to-peer
+* চারটার তুলনা · কখন কোনটা (decision tree)
+* WebSocket Scale করার ৫টা চ্যালেঞ্জ · Redis Pub/Sub Backplane
+* Heartbeat, Reconnection, Authentication, Backpressure
+* Interview Q&A
+
+---
+
+## 22. [System Design Interview Framework and Case Studies](22.%20System%20Design%20Interview%20Framework%20and%20Case%20Studies.md)
+
+**আলোচ্য বিষয়:**
+
+* Interviewer আসলে কী দেখতে চায়
+* ৪৫ মিনিটের ৭ ধাপের Framework
+* যে ভুলগুলো সবাই করে
+* Case Study 1 — URL Shortener (TinyURL)
+* Case Study 2 — Chat System (WhatsApp)
+* Case Study 3 — News Feed (Fan-out on Write vs Read)
+* Case Study 4 — Video Streaming (YouTube)
+* Case Study 5 — Ride Sharing (Uber, Geospatial Index)
+* Case Study 6 — Notification System
+* শেষ মুহূর্তের Checklist
+
+---
+
+## 23. [Interview Question Bank - 120+ Q&A](23.%20Interview%20Question%20Bank%20-%20120%2B%20Q%26A.md)
+
+**আলোচ্য বিষয়:**
+
+* A. Networking ও Web Basics
+* B. API ও REST
+* C. Authentication ও Security
+* D. Scalability ও Load Balancing
+* E. Caching ও CDN
+* F. Database
+* G. Distributed Systems
+* H. Message Queue ও Async
+* I. Microservices ও Architecture
+* J. Reliability ও Observability
+* K. Design Scenario — ছোট প্রশ্ন
+* L. Tricky ও Behavioral
+* দ্রুত পুনরাবৃত্তি — সবচেয়ে বেশি জিজ্ঞাসিত ১৫টা
+
+---
+
+> 📑 সংক্ষিপ্ত সূচিপত্রের জন্য দেখো [TOC.md](TOC.md) — সব note এক টেবিলে, সাথে পড়ার ক্রম।
